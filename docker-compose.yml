@@ -4,7 +4,7 @@ services:
   web:
     build:
       context: .
-      dockerfile: .
+      dockerfile: Dockerfile.dev
     ports:
       - "3000:3000"
     volumes:
@@ -14,7 +14,7 @@ services:
   tests:
     build:
       context: .
-      dockerfile: .
+      dockerfile: Dockerfile.dev
     volumes:
       - /app/node_modules
       - .:/app
