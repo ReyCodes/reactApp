@@ -6,4 +6,4 @@ before_install:
 - docker build -t rmesias/reactapp -f Dockerfile.dev .
 
 script:
-- docker run -it rmesias/reactapp npm run test -- --coverage
+- docker run -e CI=true rmesias/reactapp npm run test -- --coverage
